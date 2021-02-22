@@ -437,17 +437,18 @@
     <module>handler</module>
     <module>handler-proxy</module>
     <module>example</module>
-    <module>testsuite</module>
-    <module>testsuite-autobahn</module>
-    <module>testsuite-http2</module>
-    <module>testsuite-osgi</module>
-    <module>testsuite-shading</module>
-    <module>testsuite-native-image</module>
-    <module>testsuite-native-image-client</module>
-    <module>testsuite-native-image-client-runtime-init</module>
+<!--    <module>testsuite</module>-->
+<!--    <module>testsuite-autobahn</module>-->
+<!--    <module>testsuite-http2</module>-->
+<!--    <module>testsuite-osgi</module>-->
+<!--    <module>testsuite-shading</module>-->
+<!--    <module>testsuite-native-image</module>-->
+<!--    <module>testsuite-native-image-client</module>-->
+<!--    <module>testsuite-native-image-client-runtime-init</module>-->
     <module>transport-blockhound-tests</module>
     <module>microbench</module>
     <module>bom</module>
+    <module>netty-learning</module>
   </modules>
 
   <dependencyManagement>
@@ -1374,6 +1375,8 @@
             <execution>
               <id>default-jar</id>
               <configuration>
+<!--                修改的-->
+<!--                <classifier>${os.detected.classifier}</classifier>-->
                 <archive>
                   <manifest>
                     <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
