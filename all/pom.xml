@@ -584,6 +584,12 @@
       <artifactId>netty-example</artifactId>
       <scope>compile</scope>
       <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-tcnative</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Add optional dependencies explicitly to avoid Javadoc warnings and errors. -->

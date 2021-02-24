@@ -36,6 +36,12 @@
       <version>${project.version}</version>
       <scope>compile</scope>
       <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-tcnative</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!-- All-in-one JAR -->
     <dependency>

@@ -13,16 +13,17 @@
 
   
   <dependencies>
+
     <dependency>
       <groupId>io.netty</groupId>
-      <artifactId>netty-all</artifactId>
+      <artifactId>netty-transport</artifactId>
       <version>4.1.57.Final-SNAPSHOT</version>
-      <exclusions>
-        <exclusion>
-          <groupId>io.netty</groupId>
-          <artifactId>netty-tcnative</artifactId>
-        </exclusion>
-      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-handler</artifactId>
+      <version>4.1.57.Final-SNAPSHOT</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
