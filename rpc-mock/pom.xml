@@ -9,10 +9,20 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   
-  <artifactId>netty-learning</artifactId>
-
+  <artifactId>rpc-mock</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>rpc-common</module>
+    <module>rpc-provider</module>
+    <module>mock-consumer</module>
+  </modules>
   
   <dependencies>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <scope>compile</scope>
+    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -28,7 +38,7 @@
       <artifactId>netty-handler</artifactId>
       <version>4.1.57.Final-SNAPSHOT</version>
     </dependency>
- 
+
   </dependencies>
 
 </project>

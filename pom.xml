@@ -449,6 +449,7 @@
     <module>microbench</module>
     <module>bom</module>
     <module>netty-learning</module>
+    <module>rpc-mock</module>
   </modules>
 
   <dependencyManagement>
