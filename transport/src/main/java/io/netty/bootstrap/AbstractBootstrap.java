@@ -264,6 +264,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
      * Create a new {@link Channel} and bind it.
      */
     public ChannelFuture bind(SocketAddress localAddress) {
+        /*一些null的验证*/
         validate();
         return doBind(ObjectUtil.checkNotNull(localAddress, "localAddress"));
     }

@@ -86,6 +86,7 @@ public abstract class MultithreadEventExecutorGroup extends AbstractEventExecuto
         for (int i = 0; i < nThreads; i ++) {
             boolean success = false;
             try {
+                //NIOEventLoopGroup
                 children[i] = newChild(executor, args);
                 success = true;
             } catch (Exception e) {
@@ -93,6 +94,7 @@ public abstract class MultithreadEventExecutorGroup extends AbstractEventExecuto
                 throw new IllegalStateException("failed to create a child event loop", e);
             } finally {
                 if (!success) {
+                    /*如果没有成功则关闭此EventExecutor*/
                     for (int j = 0; j < i; j ++) {
                         children[j].shutdownGracefully();
                     }
@@ -125,6 +127,7 @@ public abstract class MultithreadEventExecutorGroup extends AbstractEventExecuto
         };
 
         for (EventExecutor e: children) {
+            /*添加关闭监听器*/
             e.terminationFuture().addListener(terminationListener);
         }
 

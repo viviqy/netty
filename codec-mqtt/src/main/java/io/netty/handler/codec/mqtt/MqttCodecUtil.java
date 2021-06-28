@@ -21,7 +21,7 @@ import io.netty.handler.codec.DecoderException;
 import io.netty.util.Attribute;
 import io.netty.util.AttributeKey;
 
-final class MqttCodecUtil {
+final class  MqttCodecUtil {
 
     private static final char[] TOPIC_WILDCARDS = {'#', '+'};
     private static final int MIN_CLIENT_ID_LENGTH = 1;

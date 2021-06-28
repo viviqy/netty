@@ -1,3 +1,5 @@
+package com.fairychar.netty.learning;
+
 import com.fairychar.netty.learning.server.hander.ExceptionHandler;
 import com.fairychar.netty.learning.server.hander.ThrowHandler;
 import io.netty.bootstrap.ServerBootstrap;
@@ -9,17 +11,15 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.handler.logging.LoggingHandler;
-import org.junit.Test;
 
 /**
- * Datetime: 2021/2/22 09:14 <br>
+ * Datetime: 2021/6/24 13:03 <br>
  *
  * @author chiyo <br>
  * @since 1.0
  */
-public class TestMain {
-    @Test
-    public void testCreateServer(){
+public class TestApp {
+    public static void main(String[] args) {
         NioEventLoopGroup boss = new NioEventLoopGroup(1);
         NioEventLoopGroup worker = new NioEventLoopGroup(4);
         try {
